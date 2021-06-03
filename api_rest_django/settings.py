@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'profiles_api',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +129,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+""" For authentication and user registration 
+    Esto es lo que Django utiliza para configurar la Base de datos"""
+
+AUTH_USER_MODEL = 'profiles_api.UserProfile'
